@@ -1,0 +1,33 @@
+[Project]
+FileName=NetWatchPro.dev
+Name=NetWatchPro
+Type=1
+Ver=2
+ObjFiles=
+Includes=
+Libs=
+PrivateResource=
+ResourceIncludes=
+MakeIncludes=
+Compiler=
+CppCompiler=-std=c++11 -O2 -Wall -Wextra -pthread
+Linker=-lws2_32 -pthread
+IsCpp=1
+UnitCount=1
+UseCustomMakefile=0
+CustomMakefile=
+OverrideOutput=1
+OverrideOutputName=NetWatchPro.exe
+HostApplication=
+CommandLine=
+UseUTF8=0
+
+[Unit1]
+FileName=main.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=

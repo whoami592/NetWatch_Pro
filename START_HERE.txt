@@ -1,0 +1,46 @@
+NETWATCH PRO
+Coded by Cyber Security Engineer Mr Sabaz Ali Khan
+
+1. ZIP ko poora extract karein. ZIP ke andar se program run na karein.
+2. Dev-C++ mein NetWatchPro.dev open karein aur compile karein.
+3. Compiler options: -std=c++11 -O2 -Wall -Wextra -pthread
+4. Linker options: -lws2_32 -pthread
+5. Compile ke baad run_windows.bat open karein.
+
+Agar g++ PATH mein hai to build_windows.bat se bhi compile kar sakte hain.
+Agar nahi hai, CMD mein apne compiler ka actual path dein:
+build_windows.bat "C:\path\to\MinGW64\bin\g++.exe"
+
+Menu:
+1 = targets dekhein
+2 = naya service add karein
+3 = service remove karein
+4 = ek baar check
+5 = continuous monitor; Ctrl+C se rok dein
+6 = fixed cycles
+0 = exit
+
+Local demo (optional Python 3):
+CMD mein: python demo_server.py
+Phir NetWatch mein option 4 choose karein.
+127.0.0.1:8765 par demo server ke baghair failure aana normal hai.
+
+Apna router add karne ka example:
+Router Web|192.168.1.1|80|1500|200|3
+Ye tabhi kaam karega jab router ka IP ye ho aur TCP port 80 par web service ho.
+Apne router/server ki actual IP aur port use karein.
+
+CSV logs: output\logs
+Session reports: output\reports
+
+UP = TCP connection successful.
+SLOW = TCP connection successful lekin threshold se slow.
+SUSPECT = check fail, failure threshold abhi complete nahi.
+ALERT = repeated TCP check failures.
+
+ALERT ka matlab lazmi nahi ke poora device offline hai.
+Ye TCP monitor hai; ICMP ping, packet loss aur bandwidth measure nahi karta.
+History CSV mein save hoti hai; SQLite dependency nahi chahiye.
+
+Windows EXE ZIP mein included nahi hai: pehle compile karna hai.
+Detailed setup aur troubleshooting README.md mein hain.
